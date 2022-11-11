@@ -1,0 +1,17 @@
+Building a Shopping Cart with ReactJS, react-bootstrap and Stripe API
+
+
+start aplication -> npx create-react-app nameOfTheFolderWeWant (in this case it was: store)
+
+cd store (to move inside our folder)
+
+npm install bootstrap react-bootstrap react-router-dom
+
+
+
+// 
+Server (en consola situado en /Desktop/ReactEcommerceProject)
+
+npm init --yes
+
+npm i express cors stripe
