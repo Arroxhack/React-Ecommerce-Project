@@ -15,3 +15,5 @@ Server (en consola situado en /Desktop/ReactEcommerceProject)
 npm init --yes
 
 npm i express cors stripe
+
+npm i dotenv

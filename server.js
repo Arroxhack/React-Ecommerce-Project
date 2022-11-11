@@ -1,11 +1,13 @@
-// Secret stripe key: sk_test_51M2h7eJ4b09Ml8471NiYgGl2tcg6hxZT6EvOCLlNeHdaKMSj1DTNTOw3LzWYPXoV414uu3O64oQ1i3HnwrXEG0DP00lixjet7B
+require('dotenv').config(); // con esta libreria conecto process.env
 // Coffee: price_1M2hDuJ4b09Ml847M5A8J2id
 // Bread: price_1M2hFmJ4b09Ml847kquMqROw
 // Egg: price_1M2hH3J4b09Ml847SRakawS8
 
+const {SECRET_STRIPE_KEY} = process.env;
+
 const express = require('express'); // express servers
 var cors = require('cors'); // it allows any ip adress to access our express server
-const stripe = require('stripe') ('sk_test_51M2h7eJ4b09Ml8471NiYgGl2tcg6hxZT6EvOCLlNeHdaKMSj1DTNTOw3LzWYPXoV414uu3O64oQ1i3HnwrXEG0DP00lixjet7B');
+const stripe = require('stripe')(SECRET_STRIPE_KEY);
 //initializing stripe client 
 
 const app = express(); // initializing our express server.
