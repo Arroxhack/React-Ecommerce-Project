@@ -1,7 +1,5 @@
 require('dotenv').config(); // con esta libreria conecto process.env
-// Coffee: price_1M2hDuJ4b09Ml847M5A8J2id
-// Bread: price_1M2hFmJ4b09Ml847kquMqROw
-// Egg: price_1M2hH3J4b09Ml847SRakawS8
+
 
 const {SECRET_STRIPE_KEY} = process.env;
 
