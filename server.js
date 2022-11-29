@@ -2,7 +2,7 @@ require('dotenv').config(); // con esta libreria conecto process.env
 
 
 const {SECRET_STRIPE_KEY} = process.env;
-const {PORT_} = process.env;
+const PORT = process.env.PORT;
 
 const express = require('express'); // express servers
 var cors = require('cors'); // it allows any ip adress to access our express server
@@ -53,6 +53,6 @@ app.post("/checkout", async (req, res) => {
     }));
 });
 
-app.listen(PORT_, () => console.log('Listening on port 3001!')) //3001
+app.listen(PORT, () => console.log(`Listening on port ${PORT}!`)) //3001
 
 
