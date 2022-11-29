@@ -2,7 +2,7 @@ require('dotenv').config(); // con esta libreria conecto process.env
 
 
 const {SECRET_STRIPE_KEY} = process.env;
-const PORT = process.env.PORT;
+
 
 const express = require('express'); // express servers
 var cors = require('cors'); // it allows any ip adress to access our express server
@@ -44,8 +44,8 @@ app.post("/checkout", async (req, res) => {
     const session = await stripe.checkout.sessions.create({ //initializing stripe session // using stripe object
         line_items: lineItems,
         mode: 'payment',
-        success_url: 'https://react-ecommerce-project-front-production.up.railway.app/success', //  http://localhost:3000
-        cancel_url: 'https://react-ecommerce-project-front-production.up.railway.app/cancel', // http://localhost:3000
+        success_url: 'http://localhost:3000' , 
+        cancel_url: 'http://localhost:3000', 
     });
 
     res.send(JSON.stringify({ //allows us to send an object to the front end // we show the user the session that stripe create for them
@@ -53,6 +53,7 @@ app.post("/checkout", async (req, res) => {
     }));
 });
 
-app.listen(PORT, () => console.log(`Listening on port ${PORT}!`)) //3001
+
+app.listen(3001, () => console.log(`Listening on port 3001!`)) 
 
 

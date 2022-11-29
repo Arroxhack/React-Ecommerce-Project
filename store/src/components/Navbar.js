@@ -5,6 +5,7 @@ import { getProductData } from '../productsStore';
 import CartProduct from './CartProduct';
 
 
+
 export default function NavbarComponent(){
 
     const cart = useContext(CartContext);
@@ -14,7 +15,7 @@ export default function NavbarComponent(){
     const handleShow = () => setShow(true);
 
     const checkout = async () => {
-        await fetch('https://react-ecommerce-project-production.up.railway.app/checkout', { //'http://localhost:3001/checkout'
+        await fetch('http://localhost:3001/checkout', { 
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
