@@ -53,6 +53,6 @@ app.post("/checkout", async (req, res) => {
     }));
 });
 
-app.listen(PORT_ || 3001, () => console.log('Listening on port 3001!'))
+app.listen(PORT_, () => console.log('Listening on port 3001!')) //3001
 
 
