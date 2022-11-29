@@ -44,8 +44,8 @@ app.post("/checkout", async (req, res) => {
     const session = await stripe.checkout.sessions.create({ //initializing stripe session // using stripe object
         line_items: lineItems,
         mode: 'payment',
-        success_url: 'http://localhost:3000/success',
-        cancel_url: 'http://localhost:3000/cancel',
+        success_url: 'https://react-ecommerce-project-front-production.up.railway.app/success', //  http://localhost:3000
+        cancel_url: 'https://react-ecommerce-project-front-production.up.railway.app/cancel', // http://localhost:3000
     });
 
     res.send(JSON.stringify({ //allows us to send an object to the front end // we show the user the session that stripe create for them
